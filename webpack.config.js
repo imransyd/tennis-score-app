@@ -7,6 +7,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js'
     },
+    resolve: {
+        alias: {
+          src: path.resolve(__dirname, 'src')
+        }
+      },
     module: {
         rules: [
             {
@@ -22,7 +27,7 @@ module.exports = {
     mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: './src/index.html'
         })
     ]
 
